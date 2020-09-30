@@ -1,7 +1,7 @@
-import * as firebase from "firebase/app";
+import * as firebase from "firebase";
 import "firebase/auth"
 
-const app = firebase.initializeApp({
+export const app = firebase.initializeApp({
     apiKey: "AIzaSyB3pqGHnwB2t5KjmPAz-mfwyB5RD9kqLjM",
     authDomain: "cash-pick-21d1a.firebaseapp.com",
     databaseURL: "https://cash-pick-21d1a.firebaseio.com",
@@ -12,4 +12,4 @@ const app = firebase.initializeApp({
     measurementId: "G-1B92FXHV1C"
 });
 
-export default app;
+export const db = app.firestore();

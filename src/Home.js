@@ -1,7 +1,11 @@
-import React from 'react';
-import app from './base';
+import React, { useEffect } from 'react';
+import {app, db} from './base';
 
 const Home = () => {
+    useEffect(() => {
+        db.collection('test').doc().set({name: 'Firas'});
+    },[])
+
     return(
         <>
         <h1>Home</h1>
